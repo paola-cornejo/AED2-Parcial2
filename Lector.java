@@ -96,11 +96,5 @@ public class Lector{
         
         return mapa;
     }
-    public static void main (String [ ] args) {         
-        
-        Lector l = new Lector("input.txt");
-        
-        System.out.println(l.leerLinea(3));
-
-    }
+    
 }
