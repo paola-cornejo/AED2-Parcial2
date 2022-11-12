@@ -230,9 +230,8 @@ public class Operaciones {
             f = new File(ruta);            
         } catch (Exception e) {
             throw e;
-        }
+        }        
         return f.exists();
-
     }
 
     /**
@@ -240,10 +239,16 @@ public class Operaciones {
      **/
     public void writeHelloWorld(String ruta) {
 
-        // Completá aca
-
-        // Si no podes resolverlo dejá el método vacio
-
+        FileWriter fw ;
+        BufferedWriter bw ;
+        try {
+            fw = new FileWriter(ruta, true);    
+            bw = new BufferedWriter(fw);
+            bw.write("Hola Mundo!");                        
+            bw.close();    
+        } catch (IOException e) {
+            return;
+        }
     }
 
 }
